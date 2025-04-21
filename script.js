@@ -1,0 +1,41 @@
+// Image slider (if present)
+document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll(".fade-image");
+    let currentIndex = 0;
+
+    if (images.length > 0) {
+        function changeImage() {
+            images.forEach((img, index) => {
+                img.style.opacity = index === currentIndex ? "1" : "0";
+            });
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+        setInterval(changeImage, 3000); // Change image every 3 seconds
+    }
+});
+
+// Mobile menu toggle (only one event listener needed)
+document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    if (menuButton && mobileMenu) {
+        menuButton.addEventListener("click", function () {
+            mobileMenu.classList.toggle("hidden");
+        });
+    }
+});
+
+// Flex text slide-in effect
+document.addEventListener("DOMContentLoaded", function () {
+    const flexTexts = document.querySelectorAll('.flex-text');
+    function onScroll() {
+        flexTexts.forEach(flexText => {
+            const rect = flexText.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 50 && rect.bottom > 0) {
+                flexText.classList.add('slide-in');
+            }
+        });
+    }
+    window.addEventListener('scroll', onScroll);
+    onScroll(); // Check on load in case already in view
+});

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <metas name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - SOM Global</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="logo-left text-2xl font-bold flex items-center">
+                    <span class="text-som-green">SOM</span>
+                    <span class="text-gray-800 ml-1">Global</span>
+                </a>
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-800 hover:text-som-blue font-medium">Home</a>
+                    <a href="aboutus.html" class="nav-link text-gray-800 hover:text-som-blue font-medium">About</a>
+                    <a href="services.html" class="nav-link text-gray-800 hover:text-som-blue font-medium">Services</a>
+                    <a href="loansave.html" class="nav-link text-gray-800 hover:text-som-blue font-medium">Loan2Save</a>
+                    <a href="contactus.html" class="nav-link text-gray-800 hover:text-som-blue font-medium">Contact</a>
+                </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+                    <i class="fas fa-bars text-gray-800 text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 text-gray-800 hover:text-som-blue font-medium">Home</a>
+                <a href="aboutus.html" class="block py-2 text-gray-800 hover:text-som-blue font-medium">About</a>
+                <a href="services.html" class="block py-2 text-gray-800 hover:text-som-blue font-medium">Services</a>
+                <a href="loansave.html" class="block py-2 text-gray-800 hover:text-som-blue font-medium">Loan2Save</a>
+                <a href="contactus.html" class="block py-2 text-gray-800 hover:text-som-blue font-medium">Contact</a>
+            </div>
+        </div>
+    </header>
+    <!-- Services Page -->
+    <section id="services" class="pt-24">
+        <div class="bg-green-custom text-white py-20">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl font-bold text-white mb-2">Our Services</h1>
+                <div class="divider bg-white h-1 w-16"></div>
+                <p class="text-xl mt-4">Innovative financial solutions designed for your success</p>
+            </div>
+        </div>
+    </section>
+    <div class="container mx-auto px-4 py-16">
+        <div class="grid grid-cols-1 gap-12">
+            <!-- Service 1 -->
+            <div class="bg-white p-8 rounded-lg shadow-md hover:bg-green-100 hover:shadow-lg transition duration-300">
+                <div class="flex flex-col md:flex-row items-center">
+                    <!-- Image on the Left -->
+                    <div class="md:w-1/4 mb-6 md:mb-0">
+                        <img src="images/l2s.jpg" alt="Service 1 Image" class="w-full h-auto mb-4 rounded-md">
+                    </div>
+                    <!-- Service 1 -->
+                    <div class="md:w-3/4 md:pl-8">
+                        <h3 class="text-2xl font-bold text-green-custom mt-4">SOM LOAN2SAVE</h3>
+                        <p class="text-gray-600 mb-4">Daily Contributions</p>
+                        <h4 class="text-xl font-semibold text-som-blue mb-4">Empowering Traders with Accessible Financial Solutions</h4>
+                        <p class="text-gray-700 mb-4">
+                            The SOM LOAN2SAVE Daily Contributions program is a flexible, short-term loan facility designed to support our cooperative members, particularly traders with daily or weekly incomes. This unique savings plan offers members the ability to access loans directly linked to their daily or weekly contributions, providing an efficient and reliable financial solution for those with consistent earnings.
+                        </p>
+                        <a href="contactus.html" class="inline-block btn-primary px-6 py-2 rounded-md font-medium mt-2">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-white p-8 rounded-lg shadow-md hover:bg-green-100 hover:shadow-lg transition duration-300">
+                <div class="flex flex-col md:flex-row items-center">
+                    <!-- Image on the Left -->
+                    <div class="md:w-1/4 mb-6 md:mb-0">
+                        <img src="images/ye.jpg" alt="Service 2 Image" class="w-full h-auto mb-4 rounded-md">
+                    </div>
+                    <!-- Text on the Right -->
+                    <div class="md:w-3/4 md:pl-8">
+                        <h3 class="text-2xl font-bold text-green-custom mt-4">SOM Young Shall Grow</h3>
+                        <p class="text-gray-600 mb-4">Savings Account</p>
+                        <h4 class="text-xl font-semibold text-som-blue mb-4">Start Strong, Save Big for Tomorrow</h4>
+                        <p class="text-gray-700">
+                            Specifically tailored towards savings to meet the initial cost of settling and setting up business for young entrepreneurs after they have completed their training/apprenticeship. It is also an account for those who want to save towards starting up a small business that has the capacity of growing subsequently.
+                        </p>
+                        <a href="contactus.html" class="inline-block btn-primary px-6 py-2 rounded-md font-medium mt-2">Open Account</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Service 3 -->
+            <div class="bg-white p-8 rounded-lg shadow-md hover:bg-green-100 hover:shadow-lg transition duration-300">
+                <div class="flex flex-col md:flex-row items-center">
+                    <!-- Image on the Left -->
+                    <div class="md:w-1/4 mb-6 md:mb-0">
+                        <img src="images/prop.jpg" alt="Service 3 Image" class="w-full h-auto mb-4 rounded-md">
+                    </div>
+                    <!-- Text on the Right -->
+                    <div class="md:w-3/4 md:pl-8">
+                        <h3 class="text-2xl font-bold text-green-custom mt-4">SOM Special Purpose</h3>
+                        <p class="text-gray-600 mb-4">Savings Account</p>
+                        <h4 class="text-xl font-semibold text-som-blue mb-4">Secure Your Dreams with Purposeful Savings</h4>
+                        <p class="text-gray-700">
+                            With this product, individual customers save towards special occasions such as weddings, pilgrimage, property acquisition while corporate organizations could save gradually to finance end-of-year bonuses, replacement of fully depreciated assets, staff promotions, annual increments, etc.
+                        </p>
+                        <a href="contactus.html" class="inline-block btn-primary px-6 py-2 rounded-md font-medium mt-2">Open Account</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Service 4 -->
+            <div class="bg-white p-8 rounded-lg shadow-md hover:bg-green-100 hover:shadow-lg transition duration-300">
+                <div class="flex flex-col md:flex-row items-center">
+                    <!-- Image on the Left -->
+                    <div class="md:w-1/4 mb-6 md:mb-0">
+                        <img src="images/mw1.jpg" alt="Service 4 Image" class="w-full h-auto mb-4 rounded-md">
+                    </div>
+                    <!-- Text on the Right -->
+                    <div class="md:w-3/4 md:pl-8">
+                        <h3 class="text-2xl font-bold text-green-custom mt-4">SOM Co-Operative</h3>
+                        <p class="text-gray-600 mb-4">Savings Account</p>
+                        <h4 class="text-xl font-semibold text-som-blue mb-4">Achieve Goals Collectively</h4>
+                        <p class="text-gray-700">
+                            This account is designed to encourage group savings and to meet the needs of members who may require short-term credits to pay annual rent advance, children's school fees, acquire property, etc., without being asked to provide additional collateral.
+                        </p>
+                        <a href="contactus.html" class="inline-block btn-primary px-6 py-2 rounded-md font-medium mt-2">Open Account</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 5: SOM Global Subsidy -->
+            <div class="bg-white p-8 rounded-lg shadow-md hover:bg-green-100 hover:shadow-lg transition duration-300">
+                <div class="flex flex-col md:flex-row items-center">
+                    <!-- Image on the Left -->
+                    <div class="md:w-1/4 mb-6 md:mb-0">
+                        <img src="images/subsidy.png" alt="SOM Global Subsidy" class="w-full h-auto mb-4 rounded-md">
+                    </div>
+                    <!-- Text on the Right -->
+                    <div class="md:w-3/4 md:pl-8">
+                        <h3 class="text-2xl font-bold text-green-custom mt-4">SOM Global Subsidy</h3>
+                        <p class="text-gray-600 mb-4">Subsidy & Empowerment Program</p>
+                        <h4 class="text-xl font-semibold text-som-blue mb-4">Financial Access for All</h4>
+                        <p class="text-gray-700 mb-4">
+                            Empowering members with flexible savings and subsidy plans for education, housing, mobility, and business-offering up to 100% tuition or rent, vehicle support, and 300% loan value after consistent contributions.
+                        </p>
+                        <a href="subsidy.html" class="inline-block btn-primary px-6 py-2 rounded-md font-medium mt-2">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">SOM Global</h3>
+                    <p class="text-gray-400 mb-6">
+                        A forward-thinking, multi-purpose cooperative society committed to excellence in the business world.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="aboutus.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Our Services</a></li>
+                        <li><a href="loansave.html" class="text-gray-400 hover:text-white">Loan2Save Program</a></li>
+                        <li><a href="contactus.html" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">Our Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">SOM LOAN2SAVE</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">SOM Young Shall Grow</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">SOM Special Purpose</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">SOM Co-Operative</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">Contact Info</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>Rahhamainiya Filling Station Plaza,Maitama Extension FCT Abuja, Nigeria</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3"></i>
+                            <div>
+                                <span>+234 703 130 5678</span><br>
+                                <span>+234 913 680 4747</span><br>
+                                <span>+234 904 901 3653</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3"></i>
+                            <span>info@somglobal.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8">
+                <p class="text-center text-gray-500">
+                    &copy; 2025 SOM Global Market Ventures. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
