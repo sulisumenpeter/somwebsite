@@ -1,0 +1,438 @@
+/* =========================
+   General Styles & Typography
+   ========================= */
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    color: #32CD32; /* LimeGreen - clean and bright */
+    margin: 0;
+    padding: 0;
+    /* Padding-top is set below for fixed header */
+}
+
+/* =========================
+   Page Visibility Utility
+   ========================= */
+.page {
+    display: none;
+}
+.page.active {
+    display: block;
+}
+
+/* Move the Home Page section up by reducing its top padding/margin */
+#home.page.active {
+    padding-top: 3rem !important;   /* Reduce from pt-24 (6rem) to 3rem */
+    margin-top: 0 !important;
+}
+
+/* Optionally, if you want to move the whole section up even more, use a negative margin */
+#home.page.active {
+    margin-top: -2rem !important;
+}
+
+/* Move the Services Page section up by reducing its top padding/margin */
+#services.pt-24 {
+    padding-top: 3rem !important;   /* Reduce from pt-24 (6rem) to 3rem */
+    margin-top: -1rem !important;   /* Optionally move it up even more */
+}
+
+/* Move the main content section up by reducing its top padding/margin */
+main > section.pt-24 {
+    padding-top: 3rem !important;   /* Reduce from pt-24 (6rem) to 3rem */
+    margin-top: -1rem !important;   /* Optionally move it up even more */
+}
+
+/* =========================
+   Hero Section Background
+   ========================= */
+.hero-bg {
+    background-image: linear-gradient(rgba(152, 251, 152, 0.5), rgba(102, 187, 102, 0.6)), 
+                      url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* =========================
+   Button Styles
+   ========================= */
+.btn-primary,
+a.btn-primary {
+    display: inline-block;
+    background-color: #32CD32;      /* Vibrant green */
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 0.375rem;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(50, 205, 50, 0.08);
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.btn-primary:hover,
+a.btn-primary:hover {
+    background-color: #228B22;      /* ForestGreen for hover */
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 4px 16px rgba(34, 139, 34, 0.15);
+    color: #fff;
+}
+
+/* =========================
+   Divider Styles
+   ========================= */
+.divider {
+    height: 4px;
+    width: 60px;
+    background-color: #32CD32;
+    margin: 1rem 0;
+}
+
+/* =========================
+   Service Card Styles
+   ========================= */
+.service-card {
+    transition: all 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(50, 205, 50, 0.1); /* Light green shadow */
+}
+
+/* =========================
+   Navigation Styling
+   ========================= */
+.nav-link {
+    position: relative;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #32CD32;
+    transition: width 0.3s;
+}
+.nav-link.active::after, .nav-link:hover::after {
+    width: 100%;
+}
+
+/* =========================
+   Custom Green Colors for Branding
+   ========================= */
+.bg-som-blue {
+    background-color: #228B22;
+}
+.text-som-blue {
+    color: #32CD32;
+}
+.border-som-blue {
+    border-color: #32CD32;
+}
+.text-som-green {
+    color: #32CD32; /* or your preferred green */
+}
+
+/* =========================
+   Flex Layouts for Sections
+   ========================= */
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+.flex-image {
+    width: 40%;
+    height: auto;
+}
+.flex-text {
+    width: 55%;
+    color: black; /* Make text black under h2 */
+    opacity: 0;
+    transform: translateX(80px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+.flex-text h2 {
+    font-weight: bold;
+    font-size: 2em;
+    color: #32CD32; /* Green color for the heading */
+}
+
+/* When .slide-in class is added, trigger the animation */
+.flex-text.slide-in {
+    animation: slideInRight 0.8s forwards;
+}
+
+/* =========================
+   Green Button Styles
+   ========================= */
+.green-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 24px;
+    background-color: #32CD32; /* money green */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+.green-button:hover {
+    background-color: #32CD32; /* slightly darker green on hover */
+    animation: blink 1s infinite;
+}
+
+/* =========================
+   Blinking Effect for Buttons
+   ========================= */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* =========================
+   Slide-in Animation for Flex Text
+   ========================= */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* =========================
+   Account Info Section
+   ========================= */
+.account-info {
+    width: 55%;
+}
+.account-info h2 {
+    font-weight: bold;
+    font-size: 2em;
+    color: #32CD32; /* Green color for the heading */
+}
+.account-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+.account-info li {
+    margin-bottom: 10px;
+}
+.account-info p, .account-info li {
+    color: black; /* Ensure the text under the h2 is black */
+}
+
+/* =========================
+   Second Button on Home Page
+   ========================= */
+.open-account-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 24px;
+    background-color: #32CD32; /* money green */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+.open-account-btn:hover {
+    background-color: #32CD32; /* keeps the button green */
+    animation: blink 1s infinite; /* Adds blinking animation */
+}
+
+/* =========================
+   Fade Slider Styles
+   ========================= */
+.fade-slider {
+    position: relative;
+    width: 100%;
+    height: 24rem; /* Default height for desktop view */
+}
+.fade-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+}
+/* Fix for mobile view */
+@media (max-width: 768px) {
+    .fade-slider {
+        height: 20rem; /* Set a fixed height for mobile view */
+    }
+}
+
+/* =========================
+   Ensure Content Starts Below Fixed Header
+   ========================= */
+body {
+    padding-top: 96px; /* Adjust this value based on the height of the header */
+}
+
+/* =========================
+   Header Styles (Fixed Position)
+   ========================= */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50; /* Ensure the header stays above the content */
+    background-color: #228B22; /* forest Green background */
+    color: #ffffff; /* White text */
+    padding: 1.5rem 0;
+}
+
+/* Align SOM Global logo/text to the left in the header, consistent with other pages */
+header .flex.items-center {
+    justify-content: flex-start;
+    gap: 0.25rem; /* Optional: small space between SOM and Global */
+}
+
+/* Only shift the SOM and Global text/logo to the left, not the whole nav menu */
+header .logo-left {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem; /* space between SOM and Global */
+}
+
+header .text-som-green,
+header .text-gray-800 {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* =========================
+   Hover Effect for Cards/Sections
+   ========================= */
+.hover-effect:hover {
+    background-color: #e6f7e6; /* Very faint green background on hover */
+    color: #000; /* Keep text color black for better readability */
+    transform: translateY(-5px); /* Slightly lift the div */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* =========================
+   Custom Utility Classes
+   ========================= */
+.text-green-custom {
+    color: #32CD32; /* Custom green color */
+}
+.bg-green-custom {
+    background-color: #228B22; /* Custom green background */
+}
+
+/* =========================
+   Root Variables (for consistency)
+   ========================= */
+:root {
+    --som-blue: #32CD32;
+}
+
+/* =========================
+   Ready Text & Criteria Heading
+   ========================= */
+.ready-text {
+    color: #32CD32; /* Lime Green */
+    font-weight: bold;
+}
+.criteria-heading {
+    color: #32CD32; /* Lime Green */
+    font-weight: bold;
+}
+
+/* =========================
+   About Section Adjustment
+   ========================= */
+#about.container {
+    margin-top: -2rem !important;
+    padding-top: 1rem !important;
+}
+
+/* =========================
+   Mobile Menu Styles
+   ========================= */
+
+#mobile-menu:not(.hidden) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Highlight each main section with a light green background on hover */
+main > section:hover,
+section.container:hover,
+.bg-white:hover,
+.bg-gray-50:hover {
+    
+    transition: background-color 0.3s;
+}
+
+/* Ensure text remains visible on hover */
+main > section:hover,
+section.container:hover,
+.bg-white:hover,
+.bg-gray-50:hover {
+    color: #222 !important;
+}
+
+/* Highlight only the content area inside each section, not the section's background */
+main > section > .bg-white:hover,
+main > section > .bg-gray-50:hover,
+section.container > .bg-white:hover,
+section.container > .bg-gray-50:hover {
+    background-color: #d1fae5 !important; /* Tailwind's green-100, very light green */
+    transition: background-color 0.3s;
+    color: #222 !important; /* Ensure text is visible */
+}
+
+/* =========================
+   Footer Styles
+   ========================= */
+/* Make the footer stick to the bottom if content is short */
+html, body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* =========================
+   Management Member Image Styles
+   ========================= */
+/* Make the Management Member 1 image even bigger */
+#management .bg-white img {
+    width: 16rem;      /* 256px */
+    height: 16rem;     /* 256px */
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto 1rem auto;
+    display: block;
+    object-fit: cover;
+}
+
