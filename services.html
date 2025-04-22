@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <metas name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services - SOM Global</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
@@ -10,10 +10,18 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="script.js"></script>
     <style>
-        /* Force mobile nav menu links to stack vertically on the services page */
+        /* OVERRIDE: Prevent style.css mobile nav menu rules from affecting this page */
+        #mobile-menu {
+            display: none !important;
+        }
+        #mobile-menu:not(.hidden) {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 0.5rem !important;
+        }
         #mobile-menu a {
             display: block !important;
-            width: 100%;
+            width: 100% !important;
         }
     </style>
 </head>
