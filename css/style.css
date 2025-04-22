@@ -377,11 +377,6 @@ header .text-gray-800 {
     gap: 0.5rem;
 }
 
-#mobile-menu a {
-    display: block;
-    width: 100%;
-}
-
 /* Highlight each main section with a light green background on hover */
 main > section:hover,
 section.container:hover,
