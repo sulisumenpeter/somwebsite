@@ -156,7 +156,6 @@ a.btn-primary:hover {
 .flex-text {
     width: 55%;
     color: black; /* Make text black under h2 */
-    opacity: 0;
     transform: translateX(80px);
     transition: opacity 0.6s, transform 0.6s;
 }
