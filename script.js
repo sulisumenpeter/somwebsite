@@ -14,16 +14,33 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// Mobile menu toggle (only one event listener needed)
-document.addEventListener("DOMContentLoaded", function () {
+// mobile menu toggle code 
+document.addEventListener("DOMContentLoaded", function() {
     const menuButton = document.getElementById("mobile-menu-button");
     const mobileMenu = document.getElementById("mobile-menu");
+    
     if (menuButton && mobileMenu) {
-        menuButton.addEventListener("click", function () {
-            mobileMenu.classList.toggle("hidden");
+        // Add touch events for mobile devices
+        menuButton.addEventListener("click", toggleMenu);
+        menuButton.addEventListener("touchend", function(e) {
+            e.preventDefault(); // Prevent ghost clicks
+            toggleMenu();
         });
+        
+        function toggleMenu() {
+            // Toggle display directly instead of just toggling the class
+            if (mobileMenu.classList.contains("hidden")) {
+                mobileMenu.classList.remove("hidden");
+                mobileMenu.style.display = "flex";
+                menuButton.innerHTML = '<i class="fas fa-times text-gray-800 text-2xl"></i>'; // Change to X icon
+            } else {
+                mobileMenu.classList.add("hidden");
+                mobileMenu.style.display = "none";
+                menuButton.innerHTML = '<i class="fas fa-bars text-gray-800 text-2xl"></i>'; // Change back to bars icon
+            }
+        }
     }
-});
+});s
 
 // Flex text slide-in effect
 document.addEventListener("DOMContentLoaded", function () {
