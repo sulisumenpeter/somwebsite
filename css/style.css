@@ -52,6 +52,13 @@ main > section.pt-24 {
     background-size: cover;
     background-position: center;
 }
+.container {
+    max-width: 100% !important;
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
 
 /* =========================
    Button Styles
