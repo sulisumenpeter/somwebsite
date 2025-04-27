@@ -59,7 +59,8 @@ main > section.pt-24 {
   html, body {
     overflow-x: hidden;
   }
-
+  
+  
 /* =========================
    Button Styles
    ========================= */
@@ -457,3 +458,109 @@ footer {
     object-fit: cover;
 }
 
+/* Base styles for larger screens */
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .flex-image {
+    width: 40%;  /* Adjust image width on larger screens */
+    height: auto;
+  }
+  
+  .flex-text {
+    flex: 1;  /* Allow text section to take remaining space */
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .green-button {
+    background-color: #4CAF50;  /* Adjust button color as necessary */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  /* Responsive styles for smaller screens */
+  @media (max-width: 768px) {
+    .flex-container {
+      flex-direction: column;  /* Stack the content vertically */
+      align-items: center;     /* Center align content */
+      text-align: center;      /* Center align text */
+      gap: 15px;               /* Adjust gap between elements */
+      padding: 15px;           /* Adjust padding */
+    }
+  
+    .flex-image {
+      width: 80%;  /* Make the image larger in mobile view */
+      margin-bottom: 15px;  /* Add space below the image */
+    }
+  
+    h2 {
+      font-size: 1.5rem;  /* Reduce font size for mobile */
+    }
+  
+    p {
+      font-size: 0.9rem;  /* Reduce font size for mobile */
+      line-height: 1.4;  /* Adjust line height for readability */
+      margin-bottom: 20px;  /* Add space below the paragraph */
+    }
+  
+    .green-button {
+      width: 100%;  /* Make the button full-width on mobile */
+      padding: 12px 0;  /* Adjust button padding for mobile */
+      font-size: 1.1rem;  /* Adjust font size for mobile */
+    }
+  }
+
+  /* Responsive styles for mobile screens */
+  @media (max-width: 768px) {
+    /* Stack content vertically */
+    div {
+      flex-direction: column;  /* Stack the image and text vertically */
+      align-items: center;  /* Center the content */
+      gap: 15px;  /* Adjust gap between elements */
+      padding: 15px;  /* Adjust padding */
+    }
+  
+    /* Make the image a bit bigger on mobile */
+    div img {
+      width: 80%;  /* Make image larger for mobile */
+      margin-bottom: 15px;  /* Space below the image */
+    }
+  
+    /* Adjust text styles for mobile */
+    div .account-info h2 {
+      font-size: 1.5rem;  /* Smaller font size for mobile */
+      text-align: center;  /* Center align text */
+    }
+  
+    div .account-info ul {
+      font-size: 0.9rem;  /* Smaller font size for mobile */
+      padding-left: 0;    /* Remove padding for mobile */
+      text-align: center;  /* Center align list items */
+    }
+  
+    /* Button styling for mobile */
+    div .open-account-btn {
+      width: 100%;  /* Make button full width */
+      padding: 12px 0;  /* Adjust button padding */
+      font-size: 1.1rem;  /* Increase button font size */
+    }
+  }
+  
